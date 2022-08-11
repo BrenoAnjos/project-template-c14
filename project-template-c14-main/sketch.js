@@ -1,6 +1,8 @@
 var bow , arrow,  background;
 var bowImage, arrowImage, green_balloonImage, red_balloonImage, pink_balloonImage ,blue_balloonImage, backgroundImage;
 
+var score=0
+
 function preload(){
   
   backgroundImage = loadImage("background0.png");
@@ -91,18 +93,19 @@ function blueBalloon() {
   //adicioneImagem para o balão
   //adicione velocidade para fazer o balão se mover
   //mudar a dimensão do balão
-  //atribua tempo de vida ao balão}
-
+  //atribua tempo de vida ao balão
+}
 function greenBalloon() {
   //crieSprite para o balão
   //adicioneImagem para o balão
   //adicione velocidade para fazer o balão se mover
   //mudar a dimensão do balão
-  //atribua tempo de vida ao balão}
-
+  //atribua tempo de vida ao balão
+}
 function pinkBalloon() {
   //crieSprite para o balão
   //adicioneImagem para o balão
   //adicione velocidade para fazer o balão se mover
   //mudar a dimensão do balão
-  //atribua tempo de vida ao balão}
+  //atribua tempo de vida ao balão
+}
