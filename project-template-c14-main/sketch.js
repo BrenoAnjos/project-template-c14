@@ -9,7 +9,12 @@ function preload(){
   arrowImage = loadImage("arrow0.png");
   bowImage = loadImage("bow0.png");
   red_balloonImage = loadImage("red_balloon0.png");
-  
+  //carregue a imagem do balão verde
+green_balloonImage = loadImage("green_balloon0.png")
+  //carregue a imagem do balão rosa
+pink_balloonImage = loadImage("pink_balloon0.png")
+  //carregue a imagem do balão azul
+  blue_balloonImage = loadImage("blue_balloon0.png")
 }
 
 
@@ -48,17 +53,21 @@ function draw() {
   }
   
   //mude o valor do balão aleatório para 4
-  var select_balloon = Math.round(random(1,1));
+  var select_balloon = Math.round(random(1,4));
   
   if (World.frameCount % 100 == 0) {
    switch(select_balloon){
     case 1: //chamar o balãovermelho
+    redBalloon()
     break;
     case 2://chamar o balãoazul
+    blueBalloon()
     break;
     case 3://chamar o balãoverde
+    greenBalloon()
     break;
     case 4://chamar o balãorosa
+    pinkBalloon()
 break;
 
   }}
@@ -89,23 +98,38 @@ function redBalloon() {
 }
 
 function blueBalloon() {
-  //crieSprite para o balão 
+  //crieSprite para o balão
+  var azul = createSprite(0,Math.round(random(20, 370)), 10, 10); 
   //adicioneImagem para o balão
+  azul.addImage(blue_balloonImage);
   //adicione velocidade para fazer o balão se mover
+  azul.velocityX = 3;
   //mudar a dimensão do balão
+  azul.scale = 0.1
   //atribua tempo de vida ao balão
+  azul.lifetime = 150;
 }
 function greenBalloon() {
   //crieSprite para o balão
+  var verde = createSprite(0,Math.round(random(20, 370)), 10, 10);
   //adicioneImagem para o balão
+  verde.addImage(green_balloonImage);
   //adicione velocidade para fazer o balão se mover
+  verde.velocityX = 3;
   //mudar a dimensão do balão
+  verde.scale = 0.1
   //atribua tempo de vida ao balão
+  verde.lifetime = 150;
 }
 function pinkBalloon() {
   //crieSprite para o balão
+  var rosa = createSprite(0,Math.round(random(20, 370)), 10, 10);
   //adicioneImagem para o balão
+  rosa.addImage(pink_balloonImage);
   //adicione velocidade para fazer o balão se mover
+  rosa.velocityX = 3;
   //mudar a dimensão do balão
+  rosa.scale = 0.8
   //atribua tempo de vida ao balão
+  rosa.lifetime = 150;
 }
